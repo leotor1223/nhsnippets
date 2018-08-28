@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   namespace="NhSnippets.Domain.Tenant" assembly="NhSnippets"
+                   xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Tenant" dynamic-update="true" optimistic-lock="none">
+    <cache region="DefaultCache" usage="nonstrict-read-write" />
+    <id name="Id" column="TenantID" type="Guid">
+      <generator class="guid.comb" />
+    </id>
+
+    <property name="Name" length="25" not-null="true" />
+    <property name="Code" length="10" not-null="true" unique="true" />
+    <property name="SupportedLocales" not-null="true"
+              type="NhSnippets.NhXml.Mapping.UserTypes.ValueListUserType, NhSnippets.NhXml" />
+
+    <set name="DeliveryChannels" table="TenantTwoFactorDeliveryChannel">
+      <key column="TenantID" />
+      <element column="TwoFactorDeliveryChannelID"
+               type="NhSnippets.NhXml.Mapping.UserTypes.EnumerationType`1[[NhSnippets.Domain.Tenant.DeliveryChannelType, NhSnippets]], NhSnippets.NhXml" />
+    </set>
+
+    <set name="VerificationModes" table="TenantVerificationMode">
+      <key column="TenantID" />
+      <element column="VerificationModeID" />
+    </set>
+  </class>
+</hibernate-mapping>

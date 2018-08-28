@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.core.2.4.0\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.0\build\xunit.core.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B0D9059-A6F7-4611-9B64-C6D7F3CE41EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NhSnippets.FluentNHibernate.Tests</RootNamespace>
+    <AssemblyName>NhSnippets.FluentNHibernate.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.2\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.1.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.1\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.2\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.4.0.4049, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.4.0\lib\netstandard2.0\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.0.4049, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.0\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.0.4049, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.0\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tests.cs" />
+    <Compile Include="TestOutputAppender.cs" />
+    <Compile Include="DatabaseFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NhSnippets.FluentNHibernate\NhSnippets.FluentNHibernate.csproj">
+      <Project>{80CDD23F-DA5A-4C71-8774-29DFCB7010D5}</Project>
+      <Name>NhSnippets.FluentNHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NhSnippets\NhSnippets.csproj">
+      <Project>{27716a22-4959-4a81-b1ed-f6cad46b68f4}</Project>
+      <Name>NhSnippets</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.0\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.0\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.0\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.0\build\xunit.core.targets'))" />
+  </Target>
+  <Import Project="..\packages\xunit.core.2.4.0\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.0\build\xunit.core.targets')" />
+</Project>
